@@ -1,0 +1,1 @@
+1. prismanet直接使用以前的网络结构如果去除permute结构网络输出结果不正确。permute主要是当时为了移植到ncnn而添加的，当时ncnn的softmax只支持dim=3。

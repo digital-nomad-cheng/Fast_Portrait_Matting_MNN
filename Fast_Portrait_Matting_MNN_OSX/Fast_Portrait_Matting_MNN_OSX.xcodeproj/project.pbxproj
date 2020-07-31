@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		BFA47F2F24D2ED38001C814B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA47F2E24D2ED38001C814B /* main.cpp */; };
 		BFA47F3724D2ED5C001C814B /* portrait_segmenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFA47F3524D2ED5C001C814B /* portrait_segmenter.cpp */; };
+		BFA47F3A24D2EFE0001C814B /* libMNN.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA47F3924D2EFE0001C814B /* libMNN.dylib */; };
+		BFA47F3F24D2F039001C814B /* libopencv_core.3.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA47F3B24D2F038001C814B /* libopencv_core.3.4.8.dylib */; };
+		BFA47F4024D2F039001C814B /* libopencv_highgui.3.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA47F3C24D2F038001C814B /* libopencv_highgui.3.4.8.dylib */; };
+		BFA47F4124D2F039001C814B /* libopencv_imgproc.3.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA47F3D24D2F039001C814B /* libopencv_imgproc.3.4.8.dylib */; };
+		BFA47F4224D2F039001C814B /* libopencv_imgcodecs.3.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA47F3E24D2F039001C814B /* libopencv_imgcodecs.3.4.8.dylib */; };
+		BFA47F4424D2F064001C814B /* libMNN.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = BFA47F3924D2EFE0001C814B /* libMNN.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		BFA47F4824D2F130001C814B /* libopencv_video.3.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA47F4724D2F130001C814B /* libopencv_video.3.4.8.dylib */; };
+		BFA47F4C24D2F19C001C814B /* libopencv_videoio.3.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA47F4B24D2F19C001C814B /* libopencv_videoio.3.4.8.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,6 +29,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		BFA47F4524D2F064001C814B /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BFA47F4424D2F064001C814B /* libMNN.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +47,15 @@
 		BFA47F2E24D2ED38001C814B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BFA47F3524D2ED5C001C814B /* portrait_segmenter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = portrait_segmenter.cpp; sourceTree = "<group>"; };
 		BFA47F3624D2ED5C001C814B /* portrait_segmenter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = portrait_segmenter.hpp; sourceTree = "<group>"; };
+		BFA47F3924D2EFE0001C814B /* libMNN.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libMNN.dylib; sourceTree = "<group>"; };
+		BFA47F3B24D2F038001C814B /* libopencv_core.3.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_core.3.4.8.dylib; sourceTree = "<group>"; };
+		BFA47F3C24D2F038001C814B /* libopencv_highgui.3.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_highgui.3.4.8.dylib; sourceTree = "<group>"; };
+		BFA47F3D24D2F039001C814B /* libopencv_imgproc.3.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_imgproc.3.4.8.dylib; sourceTree = "<group>"; };
+		BFA47F3E24D2F039001C814B /* libopencv_imgcodecs.3.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_imgcodecs.3.4.8.dylib; sourceTree = "<group>"; };
+		BFA47F4324D2F056001C814B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA47F4624D2F07F001C814B /* Fast_Portrait_Matting_MNN_OSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fast_Portrait_Matting_MNN_OSX.entitlements; sourceTree = "<group>"; };
+		BFA47F4724D2F130001C814B /* libopencv_video.3.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_video.3.4.8.dylib; sourceTree = "<group>"; };
+		BFA47F4B24D2F19C001C814B /* libopencv_videoio.3.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_videoio.3.4.8.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +63,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA47F3A24D2EFE0001C814B /* libMNN.dylib in Frameworks */,
+				BFA47F4024D2F039001C814B /* libopencv_highgui.3.4.8.dylib in Frameworks */,
+				BFA47F4824D2F130001C814B /* libopencv_video.3.4.8.dylib in Frameworks */,
+				BFA47F4224D2F039001C814B /* libopencv_imgcodecs.3.4.8.dylib in Frameworks */,
+				BFA47F4C24D2F19C001C814B /* libopencv_videoio.3.4.8.dylib in Frameworks */,
+				BFA47F4124D2F039001C814B /* libopencv_imgproc.3.4.8.dylib in Frameworks */,
+				BFA47F3F24D2F039001C814B /* libopencv_core.3.4.8.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +79,8 @@
 		BFA47F2224D2ED38001C814B = {
 			isa = PBXGroup;
 			children = (
+				BFA47F4324D2F056001C814B /* Info.plist */,
+				BFA47F3824D2EFC7001C814B /* Libs */,
 				BFA47F2D24D2ED38001C814B /* Fast_Portrait_Matting_MNN_OSX */,
 				BFA47F2C24D2ED38001C814B /* Products */,
 			);
@@ -60,11 +97,26 @@
 		BFA47F2D24D2ED38001C814B /* Fast_Portrait_Matting_MNN_OSX */ = {
 			isa = PBXGroup;
 			children = (
+				BFA47F4624D2F07F001C814B /* Fast_Portrait_Matting_MNN_OSX.entitlements */,
 				BFA47F2E24D2ED38001C814B /* main.cpp */,
 				BFA47F3524D2ED5C001C814B /* portrait_segmenter.cpp */,
 				BFA47F3624D2ED5C001C814B /* portrait_segmenter.hpp */,
 			);
 			path = Fast_Portrait_Matting_MNN_OSX;
+			sourceTree = "<group>";
+		};
+		BFA47F3824D2EFC7001C814B /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				BFA47F4B24D2F19C001C814B /* libopencv_videoio.3.4.8.dylib */,
+				BFA47F4724D2F130001C814B /* libopencv_video.3.4.8.dylib */,
+				BFA47F3B24D2F038001C814B /* libopencv_core.3.4.8.dylib */,
+				BFA47F3C24D2F038001C814B /* libopencv_highgui.3.4.8.dylib */,
+				BFA47F3E24D2F039001C814B /* libopencv_imgcodecs.3.4.8.dylib */,
+				BFA47F3D24D2F039001C814B /* libopencv_imgproc.3.4.8.dylib */,
+				BFA47F3924D2EFE0001C814B /* libMNN.dylib */,
+			);
+			path = Libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +129,7 @@
 				BFA47F2724D2ED38001C814B /* Sources */,
 				BFA47F2824D2ED38001C814B /* Frameworks */,
 				BFA47F2924D2ED38001C814B /* CopyFiles */,
+				BFA47F4524D2F064001C814B /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -244,9 +297,19 @@
 		BFA47F3324D2ED38001C814B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Fast_Portrait_Matting_MNN_OSX/Fast_Portrait_Matting_MNN_OSX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WUNJD37RX7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/Users/vincent/Libs/MNN/include,
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -254,9 +317,19 @@
 		BFA47F3424D2ED38001C814B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Fast_Portrait_Matting_MNN_OSX/Fast_Portrait_Matting_MNN_OSX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WUNJD37RX7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/Users/vincent/Libs/MNN/include,
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
