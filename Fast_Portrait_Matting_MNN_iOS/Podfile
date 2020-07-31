@@ -1,0 +1,4 @@
+# Uncomment this line to define a global platform for your project
+target 'Fast_Portrait_Matting_MNN_iOS' do
+	pod 'GPUImage'
+end

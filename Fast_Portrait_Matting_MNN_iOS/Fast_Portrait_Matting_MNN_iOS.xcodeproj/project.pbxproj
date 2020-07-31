@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23BFF33E9141662F89397D46 /* libPods-Fast_Portrait_Matting_MNN_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B670E792B42C1E5CF4FF69 /* libPods-Fast_Portrait_Matting_MNN_iOS.a */; };
+		BF51105824D3BCAE000500F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF51105724D3BCAE000500F7 /* AppDelegate.m */; };
+		BF51105B24D3BCAE000500F7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF51105A24D3BCAE000500F7 /* SceneDelegate.m */; };
+		BF51105E24D3BCAE000500F7 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF51105D24D3BCAE000500F7 /* ViewController.mm */; };
+		BF51106124D3BCAE000500F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF51105F24D3BCAE000500F7 /* Main.storyboard */; };
+		BF51106324D3BCB3000500F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF51106224D3BCB3000500F7 /* Assets.xcassets */; };
+		BF51106624D3BCB3000500F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF51106424D3BCB3000500F7 /* LaunchScreen.storyboard */; };
+		BF51106924D3BCB3000500F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF51106824D3BCB3000500F7 /* main.m */; };
+		BF51107224D3BEAC000500F7 /* HSVideoCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = BF51107124D3BEAC000500F7 /* HSVideoCamera.m */; };
+		BF51107524D3BEF7000500F7 /* portrait_segmenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF51107324D3BEF7000500F7 /* portrait_segmenter.cpp */; };
+		BF51107724D3BF20000500F7 /* MNN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF51107624D3BF20000500F7 /* MNN.framework */; };
+		BF51107924D3BF3C000500F7 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF51107824D3BF3C000500F7 /* opencv2.framework */; };
+		BF51107F24D3C163000500F7 /* prismanet.mnn in Resources */ = {isa = PBXBuildFile; fileRef = BF51107E24D3C163000500F7 /* prismanet.mnn */; };
+		BFDE639724D3FD2100AF2C1A /* GPUImagePortraitFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDE639624D3FD2100AF2C1A /* GPUImagePortraitFilter.m */; };
+		BFDE639924D4037100AF2C1A /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFDE639824D4037100AF2C1A /* test.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A0125D7CD5B7AFBEDB47A9D3 /* Pods-Fast_Portrait_Matting_MNN_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fast_Portrait_Matting_MNN_iOS.release.xcconfig"; path = "Target Support Files/Pods-Fast_Portrait_Matting_MNN_iOS/Pods-Fast_Portrait_Matting_MNN_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		B4594B4969F7B8C8C57EBE3D /* Pods-Fast_Portrait_Matting_MNN_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fast_Portrait_Matting_MNN_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Fast_Portrait_Matting_MNN_iOS/Pods-Fast_Portrait_Matting_MNN_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B8B670E792B42C1E5CF4FF69 /* libPods-Fast_Portrait_Matting_MNN_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fast_Portrait_Matting_MNN_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF51105324D3BCAE000500F7 /* Fast_Portrait_Matting_MNN_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fast_Portrait_Matting_MNN_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF51105624D3BCAE000500F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF51105724D3BCAE000500F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF51105924D3BCAE000500F7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		BF51105A24D3BCAE000500F7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		BF51105C24D3BCAE000500F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BF51105D24D3BCAE000500F7 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		BF51106024D3BCAE000500F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF51106224D3BCB3000500F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF51106524D3BCB3000500F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF51106724D3BCB3000500F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF51106824D3BCB3000500F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF51107024D3BEAC000500F7 /* HSVideoCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVideoCamera.h; sourceTree = "<group>"; };
+		BF51107124D3BEAC000500F7 /* HSVideoCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVideoCamera.m; sourceTree = "<group>"; };
+		BF51107324D3BEF7000500F7 /* portrait_segmenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = portrait_segmenter.cpp; path = ../../Fast_Portrait_Matting_MNN_OSX/Fast_Portrait_Matting_MNN_OSX/portrait_segmenter.cpp; sourceTree = "<group>"; };
+		BF51107424D3BEF7000500F7 /* portrait_segmenter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = portrait_segmenter.hpp; path = ../../Fast_Portrait_Matting_MNN_OSX/Fast_Portrait_Matting_MNN_OSX/portrait_segmenter.hpp; sourceTree = "<group>"; };
+		BF51107624D3BF20000500F7 /* MNN.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MNN.framework; sourceTree = "<group>"; };
+		BF51107824D3BF3C000500F7 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		BF51107E24D3C163000500F7 /* prismanet.mnn */ = {isa = PBXFileReference; lastKnownFileType = file; path = prismanet.mnn; sourceTree = "<group>"; };
+		BFDE639524D3FD2100AF2C1A /* GPUImagePortraitFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImagePortraitFilter.h; sourceTree = "<group>"; };
+		BFDE639624D3FD2100AF2C1A /* GPUImagePortraitFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImagePortraitFilter.m; sourceTree = "<group>"; };
+		BFDE639824D4037100AF2C1A /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF51105024D3BCAE000500F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF51107924D3BF3C000500F7 /* opencv2.framework in Frameworks */,
+				BF51107724D3BF20000500F7 /* MNN.framework in Frameworks */,
+				23BFF33E9141662F89397D46 /* libPods-Fast_Portrait_Matting_MNN_iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1ECC5A7FD9D5C482B5E63B73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4594B4969F7B8C8C57EBE3D /* Pods-Fast_Portrait_Matting_MNN_iOS.debug.xcconfig */,
+				A0125D7CD5B7AFBEDB47A9D3 /* Pods-Fast_Portrait_Matting_MNN_iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AF8D0F515915234ED506729E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF51107824D3BF3C000500F7 /* opencv2.framework */,
+				BF51107624D3BF20000500F7 /* MNN.framework */,
+				B8B670E792B42C1E5CF4FF69 /* libPods-Fast_Portrait_Matting_MNN_iOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF51104A24D3BCAE000500F7 = {
+			isa = PBXGroup;
+			children = (
+				BF51106F24D3BE8E000500F7 /* Engine */,
+				BF51105524D3BCAE000500F7 /* Fast_Portrait_Matting_MNN_iOS */,
+				BF51105424D3BCAE000500F7 /* Products */,
+				1ECC5A7FD9D5C482B5E63B73 /* Pods */,
+				AF8D0F515915234ED506729E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF51105424D3BCAE000500F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF51105324D3BCAE000500F7 /* Fast_Portrait_Matting_MNN_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF51105524D3BCAE000500F7 /* Fast_Portrait_Matting_MNN_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BF51105624D3BCAE000500F7 /* AppDelegate.h */,
+				BF51105724D3BCAE000500F7 /* AppDelegate.m */,
+				BF51105924D3BCAE000500F7 /* SceneDelegate.h */,
+				BF51105A24D3BCAE000500F7 /* SceneDelegate.m */,
+				BF51105C24D3BCAE000500F7 /* ViewController.h */,
+				BF51105D24D3BCAE000500F7 /* ViewController.mm */,
+				BF51105F24D3BCAE000500F7 /* Main.storyboard */,
+				BF51106224D3BCB3000500F7 /* Assets.xcassets */,
+				BF51106424D3BCB3000500F7 /* LaunchScreen.storyboard */,
+				BF51106724D3BCB3000500F7 /* Info.plist */,
+				BF51106824D3BCB3000500F7 /* main.m */,
+			);
+			path = Fast_Portrait_Matting_MNN_iOS;
+			sourceTree = "<group>";
+		};
+		BF51106F24D3BE8E000500F7 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				BFDE639824D4037100AF2C1A /* test.jpg */,
+				BFDE639524D3FD2100AF2C1A /* GPUImagePortraitFilter.h */,
+				BFDE639624D3FD2100AF2C1A /* GPUImagePortraitFilter.m */,
+				BF51107024D3BEAC000500F7 /* HSVideoCamera.h */,
+				BF51107124D3BEAC000500F7 /* HSVideoCamera.m */,
+				BF51107324D3BEF7000500F7 /* portrait_segmenter.cpp */,
+				BF51107424D3BEF7000500F7 /* portrait_segmenter.hpp */,
+				BF51107E24D3C163000500F7 /* prismanet.mnn */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF51105224D3BCAE000500F7 /* Fast_Portrait_Matting_MNN_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF51106C24D3BCB3000500F7 /* Build configuration list for PBXNativeTarget "Fast_Portrait_Matting_MNN_iOS" */;
+			buildPhases = (
+				8548287990457351ADC9AB6D /* [CP] Check Pods Manifest.lock */,
+				BF51104F24D3BCAE000500F7 /* Sources */,
+				BF51105024D3BCAE000500F7 /* Frameworks */,
+				BF51105124D3BCAE000500F7 /* Resources */,
+				E4DEB932F9896B729B617337 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fast_Portrait_Matting_MNN_iOS;
+			productName = Fast_Portrait_Matting_MNN_iOS;
+			productReference = BF51105324D3BCAE000500F7 /* Fast_Portrait_Matting_MNN_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF51104B24D3BCAE000500F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = idealabs;
+				TargetAttributes = {
+					BF51105224D3BCAE000500F7 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = BF51104E24D3BCAE000500F7 /* Build configuration list for PBXProject "Fast_Portrait_Matting_MNN_iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF51104A24D3BCAE000500F7;
+			productRefGroup = BF51105424D3BCAE000500F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF51105224D3BCAE000500F7 /* Fast_Portrait_Matting_MNN_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF51105124D3BCAE000500F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF51106624D3BCB3000500F7 /* LaunchScreen.storyboard in Resources */,
+				BFDE639924D4037100AF2C1A /* test.jpg in Resources */,
+				BF51106324D3BCB3000500F7 /* Assets.xcassets in Resources */,
+				BF51106124D3BCAE000500F7 /* Main.storyboard in Resources */,
+				BF51107F24D3C163000500F7 /* prismanet.mnn in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8548287990457351ADC9AB6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fast_Portrait_Matting_MNN_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4DEB932F9896B729B617337 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fast_Portrait_Matting_MNN_iOS/Pods-Fast_Portrait_Matting_MNN_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fast_Portrait_Matting_MNN_iOS/Pods-Fast_Portrait_Matting_MNN_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fast_Portrait_Matting_MNN_iOS/Pods-Fast_Portrait_Matting_MNN_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF51104F24D3BCAE000500F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF51107224D3BEAC000500F7 /* HSVideoCamera.m in Sources */,
+				BF51105E24D3BCAE000500F7 /* ViewController.mm in Sources */,
+				BF51105824D3BCAE000500F7 /* AppDelegate.m in Sources */,
+				BF51106924D3BCB3000500F7 /* main.m in Sources */,
+				BF51105B24D3BCAE000500F7 /* SceneDelegate.m in Sources */,
+				BF51107524D3BEF7000500F7 /* portrait_segmenter.cpp in Sources */,
+				BFDE639724D3FD2100AF2C1A /* GPUImagePortraitFilter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF51105F24D3BCAE000500F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF51106024D3BCAE000500F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF51106424D3BCB3000500F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF51106524D3BCB3000500F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF51106A24D3BCB3000500F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF51106B24D3BCB3000500F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF51106D24D3BCB3000500F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4594B4969F7B8C8C57EBE3D /* Pods-Fast_Portrait_Matting_MNN_iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WUNJD37RX7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Fast_Portrait_Matting_MNN_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.yuhuacheng.idealabs.mobi.Fast-Portrait-Matting-MNN-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF51106E24D3BCB3000500F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0125D7CD5B7AFBEDB47A9D3 /* Pods-Fast_Portrait_Matting_MNN_iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WUNJD37RX7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Fast_Portrait_Matting_MNN_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.yuhuacheng.idealabs.mobi.Fast-Portrait-Matting-MNN-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF51104E24D3BCAE000500F7 /* Build configuration list for PBXProject "Fast_Portrait_Matting_MNN_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF51106A24D3BCB3000500F7 /* Debug */,
+				BF51106B24D3BCB3000500F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF51106C24D3BCB3000500F7 /* Build configuration list for PBXNativeTarget "Fast_Portrait_Matting_MNN_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF51106D24D3BCB3000500F7 /* Debug */,
+				BF51106E24D3BCB3000500F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF51104B24D3BCAE000500F7 /* Project object */;
+}
