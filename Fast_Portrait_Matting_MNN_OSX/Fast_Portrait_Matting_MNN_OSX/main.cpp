@@ -32,6 +32,7 @@ int main(int argc, const char * argv[]) {
         cap.read(curr_frame);
         segmenter.segment(curr_frame, mask);
         cv::imshow("frame", curr_frame);
+        cv::imshow("mask", mask);
         cv::waitKey(10);
     }
     return 0;

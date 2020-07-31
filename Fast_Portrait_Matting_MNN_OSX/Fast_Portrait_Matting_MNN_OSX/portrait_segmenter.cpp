@@ -58,23 +58,16 @@ void PortraitSegmenter::segment(const cv::Mat &image, cv::Mat &mask) const
     this->pretreat_data->setMatrix(trans);
     int error_code = this->pretreat_data->convert((uint8_t*)image.data, image.cols, image.rows, 0, this->_Snet_input_tensor);
     if (error_code != 0) {
+        std::cout << "Error: " << error_code << std::endl;
         return;
     }
-    // this->_Snet->resizeSession(_Snet_sess);
     this->_Snet->runSession(this->_Snet_sess);
-    int width = this->_Snet_output_tensor->width();
-    int height = this->_Snet_output_tensor->height();
-    int channels = this->_Snet_output_tensor->channel();
-    int batch = this->_Snet_output_tensor->batch();
-    auto format = this->_Snet_output_tensor->getDimensionType();
-    
     MNN::Tensor host_ouput_tensor(this->_Snet_output_tensor, MNN::Tensor::CAFFE);
     this->_Snet_output_tensor->copyToHostTensor(&host_ouput_tensor);
     mask = cv::Mat(this->input_height, this->input_width, CV_32FC2, host_ouput_tensor.host<float>());
-    float *output = this->_Snet_output_tensor->host<float>();
-    
     std::vector<cv::Mat> images(2);
     cv::split(mask, images);
-    cv::imshow("back", images[1]);
-    cv::imshow("fore", images[0]);
+    images[1] = images[1]*255;
+    images[1].convertTo(images[1], CV_8UC3);
+    mask = images[1];
 }
