@@ -17,6 +17,7 @@
 #import <GPUImage/GPUImageView.h>
 #import <GPUImage/GPUImageVideoCamera.h>
 #import <GPUImage/GPUImagePicture.h>
+#import <GPUImage/GPUImageAlphaBlendFilter.h>
 
 @interface ViewController () <GPUImageVideoCameraDelegate>
 {
@@ -24,7 +25,9 @@
     cv::Mat mask;
 }
 @property (strong, nonatomic) GPUImageView *gpuImageView;
-@property (strong, nonatomic) HSVideoCamera *videoCamera;
+@property (strong, nonatomic) GPUImagePicture *gpuImagePicture1;
+@property (strong, nonatomic) GPUImagePicture *gpuImagePicture2;
+@property (nonatomic, strong) GPUImageAlphaBlendFilter *blendFilter;
 @property (strong, nonatomic) GPUImagePicture *background;
 @property (strong, nonatomic) GPUImagePicture *alpha;
 @property (strong, nonatomic) UIImage *alphaImage;
@@ -36,40 +39,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createPortraitSegmenter];
-    
-    
-    _gpuImageView = [[GPUImageView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:_gpuImageView];
-    
-    // setup VideoCamera
-    _videoCamera  = [[HSVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x480 cameraPosition:AVCaptureDevicePositionFront useYuv:NO];
-    _videoCamera.outputImageOrientation =  UIInterfaceOrientationLandscapeLeft;
-    _videoCamera.delegate = self;
-    
-    [_videoCamera addTarget:_gpuImageView];
-    [_videoCamera startCameraCapture];
-     
     UIImage *image = [UIImage imageNamed:@"test.jpg"];
-    _imageView = [[UIImageView alloc] initWithImage:image];
-    _imageView.frame = self.view.frame;
-    [self.gpuImageView addSubview:_imageView];
     
-    /*
-    UIImage *image = [UIImage imageNamed:@"test.jpg"];
-    _imageView = [[UIImageView alloc] initWithImage:image];
-    _imageView.frame = self.view.frame;
-    [self.view addSubview:_imageView];
-    
-    cv::Mat mask;
-    cv::Mat cv_image;
-    UIImageToMat(image, cv_image);
-    
+    // segmentation
+    cv::Mat mask, cv_image;
+    UIImageToMat(image, cv_image, true);
     NSLog(@"cv_image channel %d", cv_image.channels());
     cv::cvtColor(cv_image, cv_image, cv::COLOR_RGBA2BGR);
     segmenter->segment(cv_image, mask);
-    image = MatToUIImage(mask);
-    _imageView.image = image;
-     */
+    UIImage *mask_image = MatToUIImage(mask);
+    
+    
+    // setup GPUImageView
+    _gpuImageView = [[GPUImageView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:_gpuImageView];
+    
+    // GPUImage filter chain
+    _gpuImagePicture1 = [[GPUImagePicture alloc] initWithImage:image];
+    _gpuImagePicture2 = [[GPUImagePicture alloc] initWithImage:mask_image];
+    _blendFilter  = [[GPUImageAlphaBlendFilter alloc] init];
+    [_blendFilter setMix:0.8];
+    [_gpuImagePicture1 addTarget:_blendFilter];
+    [_gpuImagePicture2 addTarget:_blendFilter];
+    [_blendFilter addTarget:_gpuImageView];
+    [_gpuImagePicture1 processImage];
+    [_gpuImagePicture2 processImage];
 }
 
 - (void)createPortraitSegmenter
@@ -78,7 +72,6 @@
     const char *path = [model_path UTF8String];
     segmenter = new PortraitSegmenter(path);
 }
-
 
 - (void)willOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer {
     CVImageBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
@@ -99,7 +92,6 @@
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         _imageView.image = _alphaImage;
     }];
-    
-    
 }
+
 @end

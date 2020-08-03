@@ -67,7 +67,7 @@ void PortraitSegmenter::segment(const cv::Mat &image, cv::Mat &mask) const
     mask = cv::Mat(this->input_height, this->input_width, CV_32FC2, host_ouput_tensor.host<float>());
     std::vector<cv::Mat> images(2);
     cv::split(mask, images);
-    images[1] = images[1]*255;
+    images[1] = images[0]*255;
     images[1].convertTo(images[1], CV_8UC3);
     mask = images[1];
 }
