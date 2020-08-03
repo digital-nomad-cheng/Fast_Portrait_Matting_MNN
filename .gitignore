@@ -1,2 +1,6 @@
 */Libs
 Fast_Portrait_Matting_MNN_OSX/Fast_Portrait_Matting_MNN_OSX.xcodeproj/*
+*.framework
+*Pods
+*xcuserstate*
+Fast_Portrait_Matting_MNN_OSX/Fast_Portrait_Matting_MNN_OSX.xcodeproj/project.xcworkspace/xcuserdata/vincent.xcuserdatad/UserInterfaceState.xcuserstate
