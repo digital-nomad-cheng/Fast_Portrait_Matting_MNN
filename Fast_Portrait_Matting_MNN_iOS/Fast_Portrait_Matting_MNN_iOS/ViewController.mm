@@ -12,12 +12,13 @@
 #import "ViewController.h"
 #import "portrait_segmenter.hpp"
 #import "HSVideoCamera.h"
-
+#import "GPUImageBackgroundBlurFilter.h"
 
 #import <GPUImage/GPUImageView.h>
 #import <GPUImage/GPUImageVideoCamera.h>
 #import <GPUImage/GPUImagePicture.h>
 #import <GPUImage/GPUImageAlphaBlendFilter.h>
+#import <GPUImage/GPUImageBoxBlurFilter.h>
 
 @interface ViewController () <GPUImageVideoCameraDelegate>
 {
@@ -28,6 +29,8 @@
 @property (strong, nonatomic) GPUImagePicture *gpuImagePicture1;
 @property (strong, nonatomic) GPUImagePicture *gpuImagePicture2;
 @property (nonatomic, strong) GPUImageAlphaBlendFilter *blendFilter;
+@property (nonatomic, strong) GPUImageBoxBlurFilter *boxBlurFilter;
+@property (nonatomic, strong) GPUImageBackgroundBlurFilter *backgroundBlurFilter;
 @property (strong, nonatomic) GPUImagePicture *background;
 @property (strong, nonatomic) GPUImagePicture *alpha;
 @property (strong, nonatomic) UIImage *alphaImage;
@@ -39,7 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createPortraitSegmenter];
-    UIImage *image = [UIImage imageNamed:@"test.jpg"];
+    UIImage *image = [UIImage imageNamed:@"4.jpg"];
     
     // segmentation
     cv::Mat mask, cv_image;
@@ -49,7 +52,6 @@
     segmenter->segment(cv_image, mask);
     UIImage *mask_image = MatToUIImage(mask);
     
-    
     // setup GPUImageView
     _gpuImageView = [[GPUImageView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:_gpuImageView];
@@ -57,13 +59,24 @@
     // GPUImage filter chain
     _gpuImagePicture1 = [[GPUImagePicture alloc] initWithImage:image];
     _gpuImagePicture2 = [[GPUImagePicture alloc] initWithImage:mask_image];
-    _blendFilter  = [[GPUImageAlphaBlendFilter alloc] init];
-    [_blendFilter setMix:0.8];
-    [_gpuImagePicture1 addTarget:_blendFilter];
-    [_gpuImagePicture2 addTarget:_blendFilter];
-    [_blendFilter addTarget:_gpuImageView];
+    _blendFilter = [[GPUImageAlphaBlendFilter alloc] init];
+    _boxBlurFilter = [[GPUImageBoxBlurFilter alloc] init];
+    _backgroundBlurFilter = [[GPUImageBackgroundBlurFilter alloc] init];
+    
+    [_gpuImagePicture1 addTarget:_boxBlurFilter];
+    [_gpuImagePicture1 addTarget:_backgroundBlurFilter];
+    [_boxBlurFilter addTarget:_backgroundBlurFilter];
+    [_gpuImagePicture2 addTarget:_backgroundBlurFilter];
+    [_backgroundBlurFilter addTarget:_gpuImageView];
     [_gpuImagePicture1 processImage];
     [_gpuImagePicture2 processImage];
+    
+//    [_blendFilter setMix:0.8];
+//    [_gpuImagePicture1 addTarget:_blendFilter];
+//    [_gpuImagePicture2 addTarget:_blendFilter];
+//    [_blendFilter addTarget:_gpuImageView];
+//    [_gpuImagePicture1 processImage];
+//    [_gpuImagePicture2 processImage];
 }
 
 - (void)createPortraitSegmenter
